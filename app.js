@@ -1,6 +1,9 @@
 const express = require('express');
 let app = express();
 
+// De este modo, SIEMPRE va a buscar primero dentro de public
+app.use(express.static("public"))
+
 app.get('/', (req, res) => {
     res.send('Hello')
 });
